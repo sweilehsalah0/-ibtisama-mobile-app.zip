@@ -1,0 +1,22 @@
+{
+  "id": "/",
+  "name": "عيادة ابتسامة | د. آلاء حريم",
+  "short_name": "ابتسامة",
+  "description": "تطبيق عيادة ابتسامة لطلب المواعيد والتواصل",
+  "lang": "ar",
+  "dir": "rtl",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f7f8f5",
+  "theme_color": "#b8ef59",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
