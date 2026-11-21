@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#b8ef59"><meta name="description" content="لوحة إدارة عيادة ابتسامة">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Dental Desk">
+<link rel="manifest" href="./manifest.webmanifest"><link rel="icon" href="./icon.svg" type="image/svg+xml">
+<title>IBTISAMA DENTAL DESK — لوحة العيادة</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700;800&display=swap');
+:root{--green:#b8ef59;--green2:#91cf39;--ink:#17211d;--muted:#77827b;--paper:#f5f7f3;--white:#fff;--line:#e8ece6;--soft:#eef4e8;--red:#e56d6d;--orange:#e9a84f;--blue:#7a91d5;--shadow:0 10px 32px #17211d0a}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Alexandria,system-ui,sans-serif;font-size:13px}button,input,select{font:inherit}button{cursor:pointer}.app{display:flex;min-height:100vh}.sidebar{width:250px;background:#fff;border-left:1px solid var(--line);padding:24px 17px;position:fixed;inset:0 0 0 auto;z-index:5;display:flex;flex-direction:column}.brand{display:flex;align-items:center;gap:11px;padding:0 8px 26px;border-bottom:1px solid var(--line)}.logo{width:44px;height:44px;border-radius:15px;background:var(--green);display:grid;place-items:center;color:var(--ink);font-size:23px;font-weight:800}.brand strong{display:block;font-size:14px}.brand small{font-size:9px;color:var(--muted)}.nav-label{font-size:9px;color:#a1aaa4;padding:23px 12px 9px}.nav{display:grid;gap:5px}.nav button{border:0;background:transparent;text-align:right;padding:12px 13px;border-radius:12px;color:#69746d;display:flex;align-items:center;gap:12px;font-size:11px}.nav button .ic{width:22px;text-align:center;font-size:16px}.nav button.active,.nav button:hover{background:#f0f6e7;color:#27351e;font-weight:700}.side-bottom{margin-top:auto;background:#f5f8f1;border-radius:16px;padding:15px}.side-bottom b{font-size:11px}.side-bottom p{font-size:9px;color:var(--muted);line-height:1.8}.side-bottom button{border:0;background:var(--green);border-radius:9px;padding:9px 12px;font-size:10px;font-weight:700;width:100%}.main{margin-right:250px;width:calc(100% - 250px);padding:25px 30px 45px}.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:27px;gap:15px}.hello h1{font-size:22px;margin:0 0 7px}.hello p{font-size:10px;color:var(--muted);margin:0}.top-actions{display:flex;align-items:center;gap:10px}.iconbtn{width:39px;height:39px;border:1px solid var(--line);background:white;border-radius:12px;position:relative}.dot{position:absolute;width:7px;height:7px;background:var(--red);border:2px solid white;border-radius:50%;top:8px;left:8px}.profile{display:flex;align-items:center;gap:9px;background:#fff;border:1px solid var(--line);padding:6px 10px;border-radius:13px}.avatar{width:31px;height:31px;background:#e9efe2;border-radius:10px;display:grid;place-items:center;font-weight:700}.profile b{font-size:10px;display:block}.profile small{font-size:8px;color:var(--muted)}.btn{border:0;background:var(--green);padding:11px 16px;border-radius:11px;font-size:10px;font-weight:700;color:var(--ink)}.btn.dark{background:var(--ink);color:white}.btn.light{background:#f0f5e9}.btn.red{background:#fff0ef;color:#b54b4b}.section{display:none}.section.active{display:block}.section-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:17px;gap:12px}.section-head h2{font-size:16px;margin:0 0 5px}.section-head p{font-size:9px;color:var(--muted);margin:0}.select{border:1px solid var(--line);background:white;border-radius:10px;padding:10px 12px;font-size:10px;color:#526057}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin-bottom:17px}.stat{background:white;border:1px solid var(--line);border-radius:17px;padding:17px;box-shadow:var(--shadow)}.stat-top{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:9px}.stat-ico{width:31px;height:31px;border-radius:10px;background:#f0f6e8;display:grid;place-items:center;font-size:15px}.stat strong{font-size:25px;display:block;margin:13px 0 4px;letter-spacing:-1px}.trend{font-size:9px;color:#649b2c}.muted{color:var(--muted)}.grid-main{display:grid;grid-template-columns:1.55fr 1fr;gap:15px;margin-bottom:17px}.panel{background:white;border:1px solid var(--line);border-radius:17px;padding:18px;box-shadow:var(--shadow);min-width:0}.panel-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}.panel-head h3{font-size:12px;margin:0}.panel-head small{font-size:9px;color:var(--muted)}.chart{height:190px;display:flex;align-items:end;gap:13px;padding:12px 5px 0;border-bottom:1px solid var(--line);background:repeating-linear-gradient(to bottom,transparent 0,transparent 45px,#f1f3ef 46px)}.bar-group{flex:1;height:100%;display:flex;align-items:end;justify-content:center;gap:4px;position:relative}.bar{width:34%;max-width:22px;border-radius:6px 6px 2px 2px;background:#dce8d0;min-height:4px}.bar.main{background:var(--green2)}.bar-label{position:absolute;bottom:-21px;font-size:8px;color:var(--muted)}.chart-legend{display:flex;gap:16px;margin-top:29px;font-size:8px;color:var(--muted)}.legend-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--green2);margin-left:5px}.legend-dot.alt{background:#dce8d0}.today-list{display:grid;gap:12px}.today-item{display:flex;align-items:center;gap:10px;padding-bottom:11px;border-bottom:1px solid #f0f2ee}.today-item:last-child{border:0;padding:0}.time{font-size:9px;color:var(--muted);width:43px}.mini-avatar{width:33px;height:33px;border-radius:11px;background:#f0f4eb;display:grid;place-items:center;font-size:12px}.person{flex:1;min-width:0}.person b{font-size:10px;display:block}.person small{font-size:8px;color:var(--muted)}.status{font-size:8px;border-radius:99px;padding:5px 8px;background:#eff7e6;color:#5d8e2a;white-space:nowrap}.status.pending{background:#fff4df;color:#a87827}.status.cancel{background:#fff0ef;color:#b85c5c}.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse;white-space:nowrap}th{text-align:right;font-size:9px;color:#8b968e;font-weight:500;padding:11px 10px;border-bottom:1px solid var(--line)}td{font-size:9px;padding:13px 10px;border-bottom:1px solid #f0f2ee}tr:last-child td{border:0}.td-person{display:flex;align-items:center;gap:8px}.td-person .mini-avatar{width:28px;height:28px}.actions{display:flex;gap:5px}.tiny{border:0;border-radius:8px;padding:7px 9px;font-size:8px;background:#eff6e7;color:#5b852e}.tiny.no{background:#fff0ef;color:#b65a5a}.search{border:1px solid var(--line);background:white;border-radius:10px;padding:10px 13px;font-size:10px;min-width:190px;outline:none}.toolbar{display:flex;gap:8px;flex-wrap:wrap}.staff-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.staff-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:17px}.staff-card .mini-avatar{width:43px;height:43px;font-size:16px;margin-bottom:12px}.staff-card b{font-size:11px;display:block}.staff-card small{color:var(--muted);font-size:9px}.staff-card p{font-size:9px;color:var(--muted);margin:13px 0 0;padding-top:12px;border-top:1px solid var(--line)}.empty{padding:35px;text-align:center;color:var(--muted);font-size:10px}.notice{background:#fff8e9;border:1px solid #f4e7c7;border-radius:12px;padding:12px 14px;font-size:9px;color:#8c6b2c;line-height:1.8;margin-bottom:15px}.modal-bg{position:fixed;inset:0;background:#17211d70;z-index:20;display:none;place-items:center;padding:18px}.modal-bg.show{display:grid}.modal{background:#fff;border-radius:20px;padding:22px;width:min(440px,100%);box-shadow:0 25px 80px #0002}.modal h3{margin:0 0 15px;font-size:15px}.field{display:grid;gap:6px;margin-bottom:12px}.field label{font-size:9px;color:var(--muted)}.field input,.field select{border:1px solid var(--line);border-radius:10px;padding:11px;font-size:10px;outline:none}.modal-actions{display:flex;gap:8px;justify-content:flex-start;margin-top:17px}.toast{position:fixed;bottom:20px;left:20px;background:var(--ink);color:white;border-radius:12px;padding:13px 17px;font-size:10px;display:none;z-index:30}.mobile-head{display:none}
+@media(max-width:1050px){.sidebar{width:220px}.main{margin-right:220px;width:calc(100% - 220px);padding:22px}.stats{grid-template-columns:repeat(2,1fr)}.grid-main{grid-template-columns:1fr}.staff-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:700px){.sidebar{width:74px;padding:17px 9px}.brand{padding:0 5px 20px;justify-content:center}.brand .brandtext,.nav-label,.nav button span:not(.ic),.side-bottom{display:none}.nav button{justify-content:center;padding:13px 5px}.nav button .ic{font-size:18px}.main{margin-right:74px;width:calc(100% - 74px);padding:17px 13px 35px}.topbar{align-items:flex-start}.hello h1{font-size:17px}.hello p{font-size:8px}.profile .profiletext{display:none}.top-actions{gap:5px}.iconbtn{width:34px;height:34px}.stats{gap:8px}.stat{padding:13px}.stat strong{font-size:21px}.stat-top{font-size:8px}.stat-ico{width:27px;height:27px}.panel{padding:13px}.chart{gap:5px}.bar{width:40%;}.staff-grid{grid-template-columns:1fr}.section-head{align-items:flex-start;flex-direction:column}.toolbar{width:100%}.search{flex:1;min-width:120px}.mobile-head{display:block}.hide-mobile{display:none}}
+</style></head>
+<body>
+<div class="app">
+<aside class="sidebar">
+  <div class="brand"><div class="logo">🦷<sup style="font-size:12px;color:#5b9226">+</sup></div><div class="brandtext"><strong>ابتسامة</strong><small>IBTISAMA DENTAL DESK</small></div></div>
+  <div class="nav-label">القائمة الرئيسية</div>
+  <nav class="nav">
+    <button class="active" data-page="overview"><span class="ic">▦</span><span>نظرة عامة</span></button>
+    <button data-page="appointments"><span class="ic">▣</span><span>طلبات المواعيد</span></button>
+    <button data-page="patients"><span class="ic">♙</span><span>المرضى</span></button>
+    <button data-page="staff"><span class="ic">♧</span><span>الموظفات والفريق</span></button>
+    <button data-page="reports"><span class="ic">▥</span><span>التقارير والإحصائيات</span></button>
+    <button data-page="followups"><span class="ic">◷</span><span>المتابعات والتذكيرات</span></button>
+  </nav>
+  <div class="nav-label">النظام</div>
+  <nav class="nav">
+    <button data-page="settings"><span class="ic">⚙</span><span>الإعدادات</span></button>
+  </nav>
+  <div class="side-bottom"><b>مساحة العيادة</b><p>هذه نسخة عرض تجريبية. اربط قاعدة البيانات لتبدأ إدارة بيانات العيادة الحقيقية.</p><button onclick="toast('سيتم إعداد النسخة السحابية في مرحلة الربط.')">إعداد التخزين السحابي</button></div>
+</aside>
+<main class="main">
+<header class="topbar">
+  <div class="hello"><h1 id="pageTitle">صباح الخير، دكتورة آلاء 👋</h1><p id="pageSub">إليكِ ملخص نشاط عيادة ابتسامة اليوم.</p></div>
+  <div class="top-actions"><button class="iconbtn" onclick="toast('لا توجد إشعارات جديدة في البيانات التجريبية.')">♧<i class="dot"></i></button><button class="btn" onclick="openModal()">＋ <span class="hide-mobile">موعد جديد</span></button><div class="profile"><div class="avatar">أ</div><div class="profiletext"><b>د. آلاء حريم</b><small>مديرة العيادة</small></div></div></div>
+</header>
+<div class="notice">وضع العرض التجريبي: الأرقام وأسماء المرضى والموظفات المعروضة بيانات افتراضية للتصميم فقط، وليست سجلات حقيقية.</div>
+
+<section class="section active" id="overview">
+ <div class="section-head"><div><h2>نظرة عامة</h2><p>مؤشرات العيادة خلال هذا الشهر</p></div><select class="select" id="period"><option>نوفمبر 2026</option><option>أكتوبر 2026</option><option>سبتمبر 2026</option></select></div>
+ <div class="stats">
+  <article class="stat"><div class="stat-top"><span>طلبات المواعيد هذا الشهر</span><span class="stat-ico">▣</span></div><strong id="statRequests">128</strong><span class="trend">↑ 12% <span class="muted">مقارنة بالشهر السابق</span></span></article>
+  <article class="stat"><div class="stat-top"><span>المواعيد المؤكدة</span><span class="stat-ico">✓</span></div><strong>86</strong><span class="trend">67% <span class="muted">من إجمالي الطلبات</span></span></article>
+  <article class="stat"><div class="stat-top"><span>مرضى جدد</span><span class="stat-ico">♙</span></div><strong>34</strong><span class="trend">↑ 8% <span class="muted">هذا الشهر</span></span></article>
+  <article class="stat"><div class="stat-top"><span>مواعيد بانتظار التأكيد</span><span class="stat-ico">◷</span></div><strong id="pendingCount">12</strong><span style="font-size:9px;color:#bd8a37">تحتاج إلى المراجعة</span></article>
+ </div>
+ <div class="grid-main">
+  <div class="panel"><div class="panel-head"><h3>طلبات المواعيد الشهرية</h3><small>آخر 6 أشهر</small></div><div class="chart" aria-label="رسم بياني تجريبي"><div class="bar-group"><div class="bar" style="height:48%"></div><div class="bar main" style="height:61%"></div><span class="bar-label">جوان</span></div><div class="bar-group"><div class="bar" style="height:55%"></div><div class="bar main" style="height:70%"></div><span class="bar-label">جويلية</span></div><div class="bar-group"><div class="bar" style="height:43%"></div><div class="bar main" style="height:58%"></div><span class="bar-label">أوت</span></div><div class="bar-group"><div class="bar" style="height:64%"></div><div class="bar main" style="height:76%"></div><span class="bar-label">سبتمبر</span></div><div class="bar-group"><div class="bar" style="height:57%"></div><div class="bar main" style="height:68%"></div><span class="bar-label">أكتوبر</span></div><div class="bar-group"><div class="bar" style="height:75%"></div><div class="bar main" style="height:91%"></div><span class="bar-label">نوفمبر</span></div></div><div class="chart-legend"><span><i class="legend-dot"></i>الطلبات المستلمة</span><span><i class="legend-dot alt"></i>المواعيد المؤكدة</span></div></div>
+  <div class="panel"><div class="panel-head"><h3>مواعيد اليوم</h3><small>4 مواعيد قادمة</small></div><div class="today-list"><div class="today-item"><span class="time">09:00</span><span class="mini-avatar">م</span><span class="person"><b>مريم ب.</b><small>فحص أولي</small></span><span class="status">مؤكد</span></div><div class="today-item"><span class="time">10:30</span><span class="mini-avatar">س</span><span class="person"><b>سارة ع.</b><small>تنظيف الأسنان</small></span><span class="status">مؤكد</span></div><div class="today-item"><span class="time">12:00</span><span class="mini-avatar">ي</span><span class="person"><b>ياسين ك.</b><small>متابعة</small></span><span class="status pending">قيد الانتظار</span></div><div class="today-item"><span class="time">14:00</span><span class="mini-avatar">ن</span><span class="person"><b>نور د.</b><small>استشارة</small></span><span class="status">مؤكد</span></div></div></div>
+ </div>
+ <div class="panel"><div class="panel-head"><h3>أحدث طلبات المواعيد</h3><button class="btn light" onclick="showPage('appointments')">عرض الكل ←</button></div><div class="table-wrap"><table><thead><tr><th>المريض</th><th>نوع الموعد</th><th>التاريخ</th><th>الحالة</th><th>الإجراء</th></tr></thead><tbody id="recentRows"></tbody></table></div></div>
+</section>
+
+<section class="section" id="appointments">
+ <div class="section-head"><div><h2>طلبات المواعيد</h2><p>إدارة الطلبات وتأكيد أو إلغاء المواعيد</p></div><div class="toolbar"><input class="search" id="appointmentSearch" placeholder="ابحث عن مريض..."><button class="btn" onclick="openModal()">＋ موعد جديد</button></div></div>
+ <div class="stats"><article class="stat"><div class="stat-top">كل الطلبات</div><strong id="allCount">128</strong></article><article class="stat"><div class="stat-top">مؤكدة</div><strong>86</strong></article><article class="stat"><div class="stat-top">بانتظار الرد</div><strong id="waitCount">12</strong></article><article class="stat"><div class="stat-top">ملغاة</div><strong>9</strong></article></div>
+ <div class="panel"><div class="table-wrap"><table><thead><tr><th>المريض</th><th>رقم الهاتف</th><th>الخدمة</th><th>التاريخ</th><th>الوقت</th><th>الحالة</th><th>إجراءات</th></tr></thead><tbody id="appointmentRows"></tbody></table></div></div>
+</section>
+
+<section class="section" id="patients">
+ <div class="section-head"><div><h2>ملفات المرضى</h2><p>قائمة تجريبية لعرض طريقة تنظيم بيانات المرضى</p></div><input class="search" id="patientSearch" placeholder="ابحث بالاسم أو الهاتف..."></div>
+ <div class="panel"><div class="table-wrap"><table><thead><tr><th>المريض</th><th>الهاتف</th><th>آخر زيارة</th><th>المواعيد</th><th>ملاحظة إدارية</th></tr></thead><tbody id="patientRows"></tbody></table></div></div>
+</section>
+
+<section class="section" id="staff">
+ <div class="section-head"><div><h2>الموظفات والفريق</h2><p>تنظيم فريق العمل وتوزيع المسؤوليات</p></div><button class="btn" onclick="toast('إضافة الموظفات ستُفعّل بعد ربط قاعدة البيانات.')">＋ إضافة موظفة</button></div>
+ <div class="staff-grid">
+  <article class="staff-card"><div class="mini-avatar">أ</div><b>د. آلاء حريم</b><small>طبيبة أسنان • مديرة النظام</small><p>الصلاحيات: كاملة</p></article>
+  <article class="staff-card"><div class="mini-avatar">س</div><b>سارة م.</b><small>استقبال ومواعيد</small><p>الصلاحيات: المواعيد والمرضى</p></article>
+  <article class="staff-card"><div class="mini-avatar">ن</div><b>نور ب.</b><small>مساعدة طبية</small><p>الصلاحيات: جدول العمل والمتابعات</p></article>
+ </div>
+</section>
+
+<section class="section" id="reports">
+ <div class="section-head"><div><h2>التقارير والإحصائيات</h2><p>ملخص أداء العيادة — بيانات توضيحية</p></div><button class="btn" onclick="window.print()">طباعة التقرير</button></div>
+ <div class="stats"><article class="stat"><div class="stat-top">طلبات الشهر</div><strong>128</strong><span class="muted">طلباً</span></article><article class="stat"><div class="stat-top">نسبة التأكيد</div><strong>67%</strong><span class="muted">من الطلبات</span></article><article class="stat"><div class="stat-top">معدل الحضور</div><strong>91%</strong><span class="muted">من المواعيد المؤكدة</span></article><article class="stat"><div class="stat-top">مرضى عائدون</div><strong>42</strong><span class="muted">هذا الشهر</span></article></div>
+ <div class="panel"><div class="panel-head"><h3>ملخص شهري</h3><small>نوفمبر 2026</small></div><p style="font-size:11px;line-height:2;color:var(--muted)">تُعرض هذه المؤشرات كأمثلة لتوضيح شكل التقارير. بعد ربط النظام السحابي ستُحسب تلقائياً من طلبات الحجز وسجلات العيادة الفعلية.</p></div>
+</section>
+
+<section class="section" id="followups">
+ <div class="section-head"><div><h2>المتابعات والتذكيرات</h2><p>قائمة المهام التي تحتاج إلى متابعة</p></div></div>
+ <div class="panel"><div class="today-list">
+ <div class="today-item"><span class="mini-avatar">◷</span><span class="person"><b>تأكيد موعد مريض</b><small>موعد تجريبي • اليوم 12:00</small></span><span class="status pending">بانتظار التأكيد</span></div>
+ <div class="today-item"><span class="mini-avatar">↻</span><span class="person"><b>متابعة بعد العلاج</b><small>مهمة تجريبية • غداً</small></span><span class="status">مجدولة</span></div>
+ <div class="today-item"><span class="mini-avatar">▣</span><span class="person"><b>تذكير بموعد قادم</b><small>مهمة تجريبية • بعد يومين</small></span><span class="status">مجدولة</span></div>
+ </div></div>
+</section>
+
+<section class="section" id="settings">
+ <div class="section-head"><div><h2>إعدادات العيادة</h2><p>معلومات الحساب والتشغيل</p></div></div>
+ <div class="panel"><div class="field"><label>اسم العيادة</label><input value="عيادة ابتسامة" readonly></div><div class="field"><label>الطبيبة المسؤولة</label><input value="د. آلاء حريم" readonly></div><div class="field"><label>رقم التواصل</label><input value="+213 696 772 031" readonly></div><div class="field"><label>البريد الإلكتروني</label><input value="boukesalah901@gmail.com" readonly></div><div class="notice">إدارة الحسابات والصلاحيات والنسخ الاحتياطي السحابي ستُفعّل في مرحلة الربط الخلفي.</div></div>
+</section>
+</main></div>
+
+<div class="modal-bg" id="modal"><div class="modal"><h3>إضافة طلب موعد تجريبي</h3><form id="newForm"><div class="field"><label>اسم المريض</label><input id="newName" required placeholder="الاسم الكامل"></div><div class="field"><label>رقم الهاتف</label><input id="newPhone" required placeholder="05 / 06 / 07"></div><div class="field"><label>نوع الموعد</label><select id="newType"><option>فحص أولي</option><option>تنظيف الأسنان</option><option>متابعة</option><option>استشارة</option></select></div><div class="field"><label>التاريخ</label><input id="newDate" type="date" required></div><div class="modal-actions"><button class="btn" type="submit">حفظ في العرض التجريبي</button><button class="btn light" type="button" onclick="closeModal()">إلغاء</button></div></form></div></div>
+<div class="toast" id="toast"></div>
+<script>
+const data=[
+{id:1,name:'مريم بوعلام',phone:'0550 000 121',type:'فحص أولي',date:'2026-11-21',time:'09:00',status:'مؤكد'},
+{id:2,name:'سارة عمار',phone:'0661 000 432',type:'تنظيف الأسنان',date:'2026-11-21',time:'10:30',status:'مؤكد'},
+{id:3,name:'ياسين قادري',phone:'0770 000 889',type:'متابعة',date:'2026-11-21',time:'12:00',status:'قيد الانتظار'},
+{id:4,name:'نور الدين',phone:'0555 000 673',type:'استشارة',date:'2026-11-21',time:'14:00',status:'مؤكد'},
+{id:5,name:'ليلى شريف',phone:'0660 000 998',type:'علاج الأسنان',date:'2026-11-22',time:'09:30',status:'قيد الانتظار'},
+{id:6,name:'أمين ب.',phone:'0771 000 567',type:'فحص أولي',date:'2026-11-23',time:'11:00',status:'ملغى'}
+];
+const patients=[
+['مريم بوعلام','0550 000 121','2026-11-21','3','متابعة دورية'],
+['سارة عمار','0661 000 432','2026-11-21','2','لا توجد ملاحظات'],
+['ياسين قادري','0770 000 889','2026-10-30','5','موعد متابعة'],
+['نور الدين','0555 000 673','2026-09-18','1','مريض جديد'],
+['ليلى شريف','0660 000 998','2026-11-10','4','متابعة بعد العلاج']
+];
+const pageInfo={overview:['صباح الخير، دكتورة آلاء 👋','إليكِ ملخص نشاط عيادة ابتسامة اليوم.'],appointments:['طلبات المواعيد','إدارة الطلبات وتأكيد المواعيد.'],patients:['المرضى','ملفات المرضى وسجل الزيارات.'],staff:['الفريق','إدارة فريق العمل والصلاحيات.'],reports:['التقارير والإحصائيات','متابعة أداء العيادة شهرياً.'],followups:['المتابعات والتذكيرات','المهام والمواعيد التي تحتاج متابعة.'],settings:['إعدادات العيادة','إدارة بيانات العيادة والنظام.']};
+function showPage(id){document.querySelectorAll('.section').forEach(s=>s.classList.toggle('active',s.id===id));document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('active',b.dataset.page===id));document.getElementById('pageTitle').textContent=pageInfo[id][0];document.getElementById('pageSub').textContent=pageInfo[id][1];}
+document.querySelectorAll('.nav button').forEach(b=>b.addEventListener('click',()=>showPage(b.dataset.page)));
+function toast(t){const e=document.getElementById('toast');e.textContent=t;e.style.display='block';clearTimeout(window._toastTimer);window._toastTimer=setTimeout(()=>e.style.display='none',3200)}
+function badge(s){return s==='مؤكد'?'<span class="status">مؤكد</span>':s==='ملغى'?'<span class="status cancel">ملغى</span>':'<span class="status pending">قيد الانتظار</span>'}
+function renderAppointments(){const q=(document.getElementById('appointmentSearch')?.value||'').toLowerCase();const rows=data.filter(x=>(x.name+x.phone).toLowerCase().includes(q));document.getElementById('appointmentRows').innerHTML=rows.map(x=>'<tr><td><div class="td-person"><span class="mini-avatar">'+x.name[0]+'</span><b>'+x.name+'</b></div></td><td>'+x.phone+'</td><td>'+x.type+'</td><td>'+x.date+'</td><td>'+x.time+'</td><td>'+badge(x.status)+'</td><td><div class="actions">'+(x.status==='قيد الانتظار'?'<button class="tiny" onclick="setStatus('+x.id, 'مؤكد')">تأكيد</button>':'')+'<button class="tiny no" onclick="setStatus('+x.id, 'ملغى')">إلغاء</button></div></td></tr>').join('')||'<tr><td colspan="7" class="empty">لا توجد نتائج.</td></tr>';document.getElementById('allCount').textContent=128+Math.max(0,data.length-6);document.getElementById('waitCount').textContent=data.filter(x=>x.status==='قيد الانتظار').length;}
+function setStatus(id,status){const item=data.find(x=>x.id===id);if(item){item.status=status;renderAppointments();renderRecent();toast('تم تحديث حالة الطلب في العرض التجريبي.');}}
+function renderRecent(){document.getElementById('recentRows').innerHTML=data.slice(0,4).map(x=>'<tr><td>'+x.name+'</td><td>'+x.type+'</td><td>'+x.date+'</td><td>'+badge(x.status)+'</td><td><button class="tiny" onclick="showPage(\'appointments\')">فتح</button></td></tr>').join('')}
+function renderPatients(){const q=(document.getElementById('patientSearch')?.value||'').toLowerCase();document.getElementById('patientRows').innerHTML=patients.filter(x=>(x[0]+x[1]).toLowerCase().includes(q)).map(x=>'<tr><td><div class="td-person"><span class="mini-avatar">'+x[0][0]+'</span><b>'+x[0]+'</b></div></td><td>'+x[1]+'</td><td>'+x[2]+'</td><td>'+x[3]+'</td><td>'+x[4]+'</td></tr>').join('')||'<tr><td colspan="5" class="empty">لا توجد نتائج.</td></tr>'}
+document.getElementById('appointmentSearch').addEventListener('input',renderAppointments);document.getElementById('patientSearch').addEventListener('input',renderPatients);
+function openModal(){document.getElementById('modal').classList.add('show')}function closeModal(){document.getElementById('modal').classList.remove('show')}
+document.getElementById('newForm').addEventListener('submit',e=>{e.preventDefault();data.unshift({id:Date.now(),name:document.getElementById('newName').value,phone:document.getElementById('newPhone').value,type:document.getElementById('newType').value,date:document.getElementById('newDate').value,time:'غير محدد',status:'قيد الانتظار'});renderAppointments();renderRecent();closeModal();e.target.reset();toast('أُضيف الطلب إلى بيانات العرض التجريبي فقط.')});
+document.getElementById('period').addEventListener('change',e=>toast('الأرقام المعروضة توضيحية ولا تتغير حسب الشهر بعد.'));
+renderAppointments();renderRecent();renderPatients();
+</script></body></html>
